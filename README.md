@@ -4,127 +4,466 @@ NutriVerse is an enterprise-grade, high-performance 3D Health and AI Nutrition S
 
 ---
 
-## 🚀 System Architecture
+# 🥗 NutriVerse
 
-NutriVerse is built using a strict dual-application architecture to ensure maximum security, hiding administrative components from the public code bundles.
+<p align="center">
+  <img src="./public/logo.png" alt="NutriVerse Logo" width="180"/>
+</p>
 
-```mermaid
-graph TD
-    User([Public User]) -->|Visits /| PublicApp[Vite Public App bundle]
-    Admin([Super Admin]) -->|Visits /admin.html| AdminApp[Vite Admin App bundle]
-    
-    subgraph Frontend Build (Vite)
-        PublicApp -->|Does NOT contain| AdminApp
-        PublicApp -->|Loads| UserModules[Dashboard, Food Scanner, AI Coach, Reports]
-        AdminApp -->|Loads| AdminModules[User CRUD, Backups, Stats, Settings]
-    end
-    
-    subgraph Backend APIs (Express)
-        UserModules -->|Port 5000 /api/*| API[Security Gateway]
-        AdminModules -->|Port 5000 /api/admin/*| API
-        API -->|Access checks| DB[(JSON Shard Database)]
-        API -->|Security logs| Audit[(Audit Logs)]
-    end
+<h1 align="center">NutriVerse</h1>
+
+<p align="center">
+AI-Powered Health, Nutrition & Fitness Platform
+</p>
+
+<p align="center">
+Scan Smarter • Eat Better • Live Healthier
+</p>
+
+---
+
+<p align="center">
+
+![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
+
+![License](https://img.shields.io/badge/license-MIT-green.svg)
+
+![NextJS](https://img.shields.io/badge/Next.js-15-black)
+
+![React](https://img.shields.io/badge/React-19-61DAFB)
+
+![TypeScript](https://img.shields.io/badge/TypeScript-5.7-blue)
+
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-4-38BDF8)
+
+![NodeJS](https://img.shields.io/badge/Node.js-20+-339933)
+
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-blue)
+
+![Prisma](https://img.shields.io/badge/Prisma-ORM-2D3748)
+
+![OpenAI](https://img.shields.io/badge/OpenAI-GPT-412991)
+
+![Docker](https://img.shields.io/badge/Docker-2496ED)
+
+![Vercel](https://img.shields.io/badge/Deploy-Vercel-black)
+
+</p>
+
+---
+
+# 🌍 About NutriVerse
+
+NutriVerse is a next-generation AI-powered Health, Nutrition, and Fitness platform designed to help individuals make smarter lifestyle decisions through artificial intelligence, computer vision, nutrition science, wearable integration, and personalized wellness recommendations.
+
+Unlike traditional calorie trackers, NutriVerse combines AI-powered food recognition, intelligent meal planning, body composition analysis, workout recommendations, wearable device synchronization, and an interactive health dashboard into a single unified ecosystem.
+
+The goal of NutriVerse is simple:
+
+> **Help every person understand their health through AI.**
+
+Whether someone wants to lose weight, gain muscle, improve nutrition, manage calories, or build healthier habits, NutriVerse provides personalized guidance backed by modern technology.
+
+---
+
+# ✨ Key Highlights
+
+- 🤖 AI Food Recognition
+- 📷 Image-based Nutrition Analysis
+- 🍎 Smart Meal Planning
+- 💪 Personalized Workout Planner
+- ❤️ Health Dashboard
+- 📈 Progress Tracking
+- 📊 AI Analytics
+- 🧠 AI Health Coach
+- ⌚ Apple Watch Integration
+- ⌚ Garmin Integration
+- ⌚ Fitbit Integration
+- ⌚ WHOOP Integration
+- 🛡 Enterprise Security
+- 🌎 Responsive Design
+- 🌙 Dark Mode
+- ⚡ Ultra Fast Performance
+- 🎮 Gamification
+- 💳 Premium Subscription
+- 👨‍💼 Admin Control Center
+
+---
+
+# 🎯 Vision
+
+To become the world's most intelligent AI-powered health companion that empowers millions of people to build healthier lifestyles using technology.
+
+---
+
+# 🎯 Mission
+
+Our mission is to simplify nutrition, fitness, and health management through artificial intelligence, making healthy living accessible, engaging, and personalized for everyone.
+
+---
+
+# 🚀 Why NutriVerse?
+
+Modern health apps often require users to manually log meals, calculate calories, and search for nutritional information.
+
+NutriVerse eliminates this complexity by allowing users to simply:
+
+- Scan food using AI
+- Receive instant nutrition insights
+- Generate personalized meal plans
+- Track body progress
+- Follow AI workout recommendations
+- Sync wearable devices
+- Monitor overall wellness from a single dashboard
+
+---
+
+# 🧠 Core Features
+
+## 🍽 AI Food Scanner
+
+Upload a food image or capture it using your camera.
+
+The AI automatically detects:
+
+- Food Name
+- Calories
+- Protein
+- Carbohydrates
+- Fat
+- Fiber
+- Sugar
+- Vitamins
+- Minerals
+- Serving Size
+- Estimated Weight
+- Health Score
+- Glycemic Impact
+
+---
+
+## 🥗 Screenshot
+
+<img width="947" height="473" alt="Screenshot 2026-07-29 003100" src="https://github.com/user-attachments/assets/d1f95e6d-5e6b-436f-a2cb-e02bbef969df" />
+
+<img width="959" height="470" alt="Screenshot 2026-07-29 003236" src="https://github.com/user-attachments/assets/7d4bd9e8-2546-446b-a7a4-17e3efa0306f" />
+
+<img width="952" height="473" alt="Screenshot 2026-07-29 003310" src="https://github.com/user-attachments/assets/17ab792e-32b9-46cc-bb83-0cc9bec0dc08" />
+
+<img width="950" height="469" alt="Screenshot 2026-07-29 003347" src="https://github.com/user-attachments/assets/7c5f1782-17ea-4a57-a383-067bbddece98" />
+
+<img width="957" height="473" alt="Screenshot 2026-07-29 003417" src="https://github.com/user-attachments/assets/cdb822bc-7d86-4e53-b585-da42e6490d19" />
+
+<img width="959" height="479" alt="Screenshot 2026-07-29 003449" src="https://github.com/user-attachments/assets/c9d17b6f-33dc-4751-b884-ce01bd1ed12f" />
+
+<img width="959" height="473" alt="Screenshot 2026-07-29 003511" src="https://github.com/user-attachments/assets/70284ee4-13f9-44be-aa56-79e8e88876ce" />
+
+<img width="956" height="472" alt="Screenshot 2026-07-29 003540" src="https://github.com/user-attachments/assets/03eddec9-f05e-4c3d-98a8-89497e001b8a" />
+
+---
+
+
+## 🥗 Nutrition Analyzer
+
+Receive complete nutritional information including:
+
+- Macronutrients
+- Micronutrients
+- Daily Value Percentage
+- Health Rating
+- AI Recommendations
+- Meal Balance Score
+
+---
+
+## 🤖 AI Health Coach
+
+NutriVerse AI acts as your personal nutrition assistant.
+
+It can:
+
+- Recommend meals
+- Suggest healthier alternatives
+- Answer nutrition questions
+- Explain vitamins
+- Recommend hydration
+- Generate healthy habits
+- Provide motivational coaching
+
+---
+
+## 🏋 Smart Workout Planner
+
+Generate personalized workouts based on:
+
+- Weight Goal
+- Fitness Level
+- Age
+- Height
+- Gender
+- Available Equipment
+- Workout Duration
+
+Workout Types:
+
+- Strength
+- Cardio
+- HIIT
+- Yoga
+- Mobility
+- Home Workout
+- Gym Workout
+
+---
+
+## 📊 Progress Dashboard
+
+Track
+
+- Weight
+- BMI
+- Body Fat
+- Muscle Mass
+- Calories
+- Water Intake
+- Sleep
+- Heart Rate
+- Steps
+- Workout Progress
+
+Interactive charts provide real-time analytics.
+
+---
+
+## ❤️ Body Analysis
+
+AI calculates
+
+- BMI
+- BMR
+- TDEE
+- Lean Mass
+- Fat Mass
+- Muscle Ratio
+- Body Shape Prediction
+
+Includes a dynamic 3D body visualization.
+
+---
+
+## 🍳 AI Recipe Generator
+
+Generate recipes based on:
+
+- Calories
+- Protein Goal
+- Available Ingredients
+- Dietary Preferences
+- Allergies
+- Cooking Time
+
+---
+
+## ⌚ Wearable Device Integration
+
+Supports:
+
+- Apple Health
+- Apple Watch
+- Fitbit
+- Garmin
+- WHOOP
+- Samsung Health
+- Google Health Connect
+- Oura Ring
+
+Automatically synchronizes:
+
+- Steps
+- Heart Rate
+- Calories
+- Sleep
+- HRV
+- Oxygen Saturation
+- Activity Minutes
+
+---
+
+## 🎮 Gamification
+
+Stay motivated by earning:
+
+- XP Points
+- Health Badges
+- Achievement Levels
+- Daily Streaks
+- Weekly Challenges
+- Community Rankings
+
+---
+
+## 👨‍💼 Admin Dashboard
+
+Secure enterprise control panel including:
+
+- User Management
+- Subscription Management
+- AI Analytics
+- Reports
+- Health Insights
+- Audit Logs
+- API Monitoring
+- Security Controls
+- System Configuration
+
+Visible only to authorized administrators.
+
+---
+
+# 🛠 Technology Stack
+
+| Category | Technology |
+|------------|-----------------------------|
+| Frontend | Next.js 15 |
+| Language | TypeScript |
+| Styling | Tailwind CSS |
+| UI | shadcn/ui |
+| Animation | Framer Motion |
+| 3D | Three.js + React Three Fiber |
+| Charts | Recharts |
+| Backend | Node.js |
+| API | Next.js API Routes |
+| Database | PostgreSQL |
+| ORM | Prisma |
+| Authentication | NextAuth.js |
+| AI | OpenAI GPT + Vision |
+| Storage | Cloudinary |
+| Payments | Stripe |
+| Email | Resend / SMTP |
+| Deployment | Vercel |
+
+---
+
+# 📂 Project Structure
+
+```text
+NutriVerse/
+│
+├── app/
+├── components/
+├── hooks/
+├── lib/
+├── utils/
+├── prisma/
+├── public/
+├── styles/
+├── types/
+├── middleware/
+├── services/
+├── api/
+├── admin/
+├── database/
+├── assets/
+├── docs/
+├── scripts/
+├── tests/
+├── package.json
+├── tsconfig.json
+├── next.config.ts
+└── README.md
 ```
 
 ---
 
-## 🔑 Security Architecture & Threat Model
+# 💻 System Requirements
 
-NutriVerse employs a zero-trust model between the public client and the administrative backend:
-
-### 1. Zero Admin Leakage (Build-Time Code Splitting)
-*   Administrative components, route layouts, and views are **completely excluded** from the main user build. Vite splits the build assets into separate pages: `index.html` (public) and `admin.html` (private).
-*   Even if a user inspects the compiled JS bundles on the main site, they will find no reference to admin modules, statistics, or database schemas.
-
-### 2. Session Security (Cryptographic JWT & HTTP-Only Cookies)
-*   Authentications generate an **Access Token** (15m expiry) and a **Refresh Token** (7d expiry) using Node's native `crypto` HMAC-SHA256 signatures.
-*   Tokens are transmitted in `httpOnly: true`, `SameSite: 'lax'`, `path: '/'` secure cookies. They are immune to client-side XSS theft.
-
-### 3. Double-Submit CSRF Defenses
-*   Every login response yields a unique, high-entropy CSRF token.
-*   All state-mutating requests (`POST`, `PUT`, `DELETE`) are checked by the backend CSRF middleware, requiring the client to attach the token in the `X-CSRF-Token` header, matching the encrypted cookie value.
-
-### 4. Router Interceptors & Guards
-*   **Client-Side Route Interception**: An active path observer in `App.tsx` checks for direct url hits matching `/admin*`. If hit, the app logs a security alert, requests a backend security endpoint, throws a 403 Forbidden screen, and rewrites the history context to `/`.
-*   **Server-Side Path Interception**: Direct hits on routes like `/admin`, `/admin/settings`, etc., return an **HTTP 403 Forbidden** page and force-redirect the browser to the home dashboard after 2 seconds.
+| Requirement | Version |
+|-------------|----------|
+| Operating System | Windows / macOS / Linux |
+| RAM | Minimum 8GB |
+| Recommended RAM | 16GB |
+| Node.js | 20.x or newer |
+| npm | 10.x or newer |
+| PostgreSQL | 16.x |
+| Git | Latest |
+| Browser | Chrome, Edge, Firefox, Safari |
 
 ---
 
-## 🛠️ Main Feature Modules
+# 📥 Installation
 
-### 1. Immersive 3D Parallax View
-Renders interactive 3D models representing human biometrics (glowing double-helix DNA, beating cardiac channels, neural brain networks) that dynamically rotate and shift based on scroll sections.
+## Clone Repository
 
-### 2. AI Food Scanner
-Enables users to analyze meal photos (camera snapshot, drag-and-drop file upload, or system paste). The Express backend processes the files and returns a complete macronutrient summary (Calories, Protein, Carbs, Fats) and vitamin metrics.
-
-### 3. Speech-Synthesized AI Nutrition Coach
-Speech-enabled conversational RAG assistant providing tailored advice for keto diets, glycemic index limits, or clinical concerns (like PCOS and Diabetes).
-
-### 4. Custom Wellness Reports (`Reports.tsx`)
-A dedicated user workspace to compile and preview health stats. Renders interactive export panels that generate download payloads in **PDF**, **CSV**, and **JSON** formats.
-
-### 5. Private Super Admin Dashboard (`admin.tsx`)
-*   **19 Interactive Widgets**: Real-time server diagnostics (CPU, memory, Kubernetes active nodes), user activity trackers, active subscription MRC charts, and support ticket registers.
-*   **Backup & Restore Manager**: Allows immediate creation of JSON database snapshots, listing snapshots, full database restorations, and database vector search optimization.
-*   **9-Section Settings Sidebar**: Granular panels to toggle GENERAL, AI, AUTH, DATABASE, PAYMENTS, SECURITY, NOTIFICATIONS, ANALYTICS, and CONNECTED DEVICES.
-
----
-
-## 💾 Database & Storage Structure
-
-All application states are persisted inside the workspace:
-*   **`server/data/db.json`**: Stores user accounts, levels/XP status, food databases, active settings, and active announcements.
-*   **`server/data/audit_log.json`**: Appends timestamps, emails, actions (e.g. `LOGIN_SUCCESSFUL`, `BACKUP_CREATED`), IP addresses, status, and detail logs for security audits.
-
----
-
-## 🎨 Brand Identity
-
-NutriVerse uses a custom-designed, futuristic vector branding system defined in **[Logo.tsx](file:///d:/final%20year%20proje/AI%20Food%20Manager/src/components/brand/Logo.tsx)**:
-*   **Logo Symbol**: Abstract vector mark combining a circular universe orbit, AI network nodes, a green leaf, and a cyan DNA helix.
-*   **Modes Supported**: Dynamic resizing (`16px` up to `512px`), dark/light contrast variants, label toggles (`showText`), and a monochrome mode (`mono`) for high-contrast print layouts.
-
----
-
-## 🚀 Installation & Setup
-
-### Prerequisites
-*   Node.js (v18 or higher)
-*   npm
-
-### 1. Start the API Server (Express)
-Open a terminal in the root folder and run:
 ```bash
-npm run server
+git clone https://github.com/your-username/nutriverse.git
 ```
-This launches the backend in file watch mode using `tsx --watch` on **`http://localhost:5000`**.
 
-### 2. Start the Frontend (Vite)
-Open a second terminal tab in the root folder and run:
+```bash
+cd nutriverse
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Copy environment file:
+
+```bash
+cp .env.example .env
+```
+
+Run database migrations:
+
+```bash
+npx prisma migrate dev
+```
+
+Generate Prisma client:
+
+```bash
+npx prisma generate
+```
+
+Start the development server:
+
 ```bash
 npm run dev
 ```
-This launches the dev server on **`http://localhost:5173`**.
 
----
+Open your browser:
 
-## 🔑 Administrative Access
-To access the private Admin Control Center:
-1.  Navigate to: **[http://localhost:5173/admin.html](http://localhost:5173/admin.html)**
-2.  Log in using the root Super Admin credentials:
-    *   **Email**: `admin@nutriverse.fit`
-    *   **Password**: `supersecretpassword1020`
-
----
-
-## 📦 Production Bundling
-To compile the separate production bundles:
-```bash
-npm run build
 ```
-Vite will compile and output:
-*   `dist/index.html` (Public App entry)
-*   `dist/admin.html` (Admin Control Center entry)
-*   `dist/assets/admin-[hash].js` (Isolated admin modules)
+http://localhost:3000
+```
+
+---
+
+## 👨‍💻 Author
+
+**Your Name**
+
+- GitHub: https://github.com/nomaddiwakar
+- LinkedIn: https://linkedin.com/in/nomaddiwakar
+- Email: diwakarkr9294@gmail.com
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please read the `CONTRIBUTING.md` guide before submitting a pull request.
+
+---
+
+## ⭐ Support
+
+If you find this project useful, please consider giving it a ⭐ on GitHub.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
+
+© 2025 NutriVerse. All rights reserved.
