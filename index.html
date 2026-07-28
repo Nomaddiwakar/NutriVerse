@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#080512" />
+    
+    <!-- Enterprise SEO & OpenGraph Meta Tags -->
+    <title>NutriVerse 3D | Immersive AI Health & Nutrition Coach</title>
+    <meta name="description" content="Unlock peak human performance with NutriVerse. Real-time AI food volume scanner, 3D body morphing logs, progressive gym split builders, and clinical coaching chat logs." />
+    <meta name="keywords" content="NutriVerse, AI Food Scanner, 3D body tracking, health coach chatbot, meal planner, workout progression, Stripe checkouts, WebGL analytics" />
+    <meta property="og:title" content="NutriVerse 3D | Immersive AI Health Telemetry Hub" />
+    <meta property="og:description" content="Integrate DNA markers, metabolic vision scans, and dynamic workout plans in one beautiful dark glassmorphic dashboard." />
+    <meta property="og:image" content="/og-image.png" />
+    <meta property="og:type" content="website" />
+    
+    <!-- PWA Web Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+
+    <!-- Performance: Prefetch Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Register PWA Service Worker -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then(reg => console.log('[NutriVerse PWA] SW registered successfully:', reg.scope))
+            .catch(err => console.warn('[NutriVerse PWA] SW registration failed:', err));
+        });
+      }
+    </script>
+  </body>
+</html>

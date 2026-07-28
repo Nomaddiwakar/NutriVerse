@@ -1,0 +1,18 @@
+{
+  "short_name": "NutriVerse",
+  "name": "NutriVerse 3D Health & Nutrition Manager",
+  "description": "Enterprise-grade AI food volume scanner and 3D fitness telemetry system.",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#080512",
+  "theme_color": "#080512",
+  "display": "standalone",
+  "orientation": "portrait"
+}

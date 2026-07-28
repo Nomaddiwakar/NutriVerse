@@ -1,0 +1,106 @@
+{
+  "settings": {
+    "general": {
+      "websiteName": "NutriVerse 3D",
+      "logo": "/favicon.svg",
+      "theme": "dark",
+      "maintenanceMode": false,
+      "timezone": "UTC+05:30",
+      "language": "en",
+      "emailConfig": "smtp.sendgrid.net"
+    },
+    "ai": {
+      "modelSelection": "Gemini 1.5 Pro",
+      "visionApiConfig": "enabled",
+      "aiLimits": 100,
+      "aiPromptConfig": "You are a professional biometrics coach. Provide highly technical responses.",
+      "aiUsageLimits": 50
+    },
+    "auth": {
+      "jwtSettings": "HS256",
+      "sessionTimeout": 3600,
+      "oauthProviders": ["google", "apple"],
+      "twoFactorAuth": false,
+      "passwordPolicies": "min_8_char"
+    },
+    "database": {
+      "status": "Optimal",
+      "backupInterval": "daily",
+      "optimizationLevel": "High"
+    },
+    "payments": {
+      "stripe": "enabled",
+      "razorpay": "disabled",
+      "paypal": "disabled",
+      "subscriptionPlans": ["Free Plan", "Premium Core"],
+      "coupons": ["WELCOME10", "FITNESS20"]
+    },
+    "security": {
+      "firewallSettings": "Strict",
+      "ipWhitelist": ["127.0.0.1"],
+      "rateLimiting": 60,
+      "loginAttempts": 5,
+      "apiKeys": "active",
+      "apiKeyToken": "nv_live_839d8fj390f239jf849f20104fjksla",
+      "webhookUrl": "https://api.nutriverse.fit/v1/webhook",
+      "encryptionSettings": "AES-256-GCM"
+    },
+    "notifications": {
+      "email": true,
+      "pushNotifications": true,
+      "sms": false,
+      "announcementBanner": "Welcome to NutriVerse 3D. Real-time biometrics engine online."
+    },
+    "analytics": {
+      "googleAnalytics": "G-498A9Z11",
+      "userStatistics": "enabled",
+      "aiStatistics": "enabled",
+      "revenueReports": "enabled"
+    },
+    "connectedDevices": {
+      "appleHealth": true,
+      "whoop": true,
+      "fitbit": false,
+      "garmin": true,
+      "samsungHealth": false,
+      "healthConnect": false,
+      "oura": true,
+      "apiSyncSettings": "immediate"
+    }
+  },
+  "users": [
+    { "email": "admin@nutriverse.fit", "role": "SUPER_ADMIN", "joinedAt": "2026-07-20", "status": "Active", "tier": "Super Admin", "passwordHash": "supersecretpassword1020", "provider": "Credentials" },
+    { "email": "diwakar@nutriverse.fit", "role": "USER", "joinedAt": "2026-07-20", "status": "Active", "tier": "Free Plan", "passwordHash": "userpassword123", "provider": "Credentials" },
+    { "email": "sarah@google-auth.com", "role": "USER", "joinedAt": "2026-07-25", "status": "Active", "tier": "Premium Core", "provider": "Google OAuth" },
+    { "email": "james@whoop.com", "role": "USER", "joinedAt": "2026-07-27", "status": "Active", "tier": "Free Plan", "provider": "Credentials", "passwordHash": "jamespwd" },
+    { "email": "badactor@botnet.ru", "role": "USER", "joinedAt": "2026-07-28", "status": "Suspended", "tier": "Free Plan", "passwordHash": "badpass123", "provider": "Credentials" }
+  ],
+  "foodItems": [
+    { "id": 1, "name": "Wild Caught Seared Salmon Fillet", "calories": 320, "protein": 34, "carbs": 0, "fats": 18 },
+    { "id": 2, "name": "Deep Fried Crispy Chicken Wings", "calories": 580, "protein": 38, "carbs": 22, "fats": 36 },
+    { "id": 3, "name": "Quinoa Broccoli Bowl", "calories": 290, "protein": 12, "carbs": 45, "fats": 6 },
+    { "id": 4, "name": "Avocado Greek Salad", "calories": 210, "protein": 5, "carbs": 12, "fats": 18 }
+  ],
+  "workoutItems": [
+    { "id": 1, "name": "Prisoner Bodyweight Squat", "level": "Beginner", "duration": "45s" },
+    { "id": 2, "name": "Dumbbell Shoulder Press", "level": "Intermediate", "duration": "40s" },
+    { "id": 3, "name": "Barbell Bench Press", "level": "Intermediate", "duration": "4 sets x 8 reps" },
+    { "id": 4, "name": "Weighted Pull-ups", "level": "Advanced", "duration": "4 sets x RPE 9" }
+  ],
+  "recipes": [
+    { "id": 1, "title": "Lemon Herb Seared Salmon Bowl", "description": "Wild caught seared salmon with fresh herbs and organic quinoa.", "calories": 450, "protein": 35, "cookingTime": "20 mins", "instructions": ["Season salmon with lemon and herbs.", "Pan-sear for 4 mins skin-down.", "Serve over warm quinoa."] },
+    { "id": 2, "title": "Pan-Roasted Herb Chicken Breasts", "description": "Lean chicken breast cooked in olive oil with garlic.", "calories": 380, "protein": 42, "cookingTime": "25 mins", "instructions": ["Preheat oven to 400F.", "Sear chicken in a skillet.", "Bake for 15 mins."] }
+  ],
+  "tickets": [
+    { "id": 1, "email": "james@whoop.com", "subject": "Whoop Sync failure", "message": "My heart rate variability is not syncing from my WHOOP band. Please advise.", "priority": "High", "status": "Open", "createdAt": "2026-07-28" },
+    { "id": 2, "email": "diwakar@nutriverse.fit", "subject": "Stripe Payment pending", "message": "I upgraded to Premium but my account still shows Free Plan.", "priority": "Critical", "status": "Closed", "createdAt": "2026-07-27", "response": "We reconciled the Stripe webhook. Your plan has been upgraded. Thank you!" }
+  ],
+  "feedback": [
+    { "id": 1, "email": "sarah@google-auth.com", "comment": "The 3D body morpher visualizer is absolute genius! Great UX.", "rating": 5, "sentiment": "Positive", "date": "2026-07-26" },
+    { "id": 2, "email": "anonymous@health.net", "comment": "The mobile landing page loads slightly slow on older Android devices.", "rating": 3, "sentiment": "Neutral", "date": "2026-07-27" }
+  ],
+  "advertisements": [
+    { "id": 1, "campaignName": "HVMN Ketone IQ Promo", "bannerUrl": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c", "destinationUrl": "https://hvmn.com", "impressions": 14200, "clicks": 420, "active": true },
+    { "id": 2, "campaignName": "Whoop Band 4.0 Bundle", "bannerUrl": "https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6", "destinationUrl": "https://whoop.com", "impressions": 9800, "clicks": 210, "active": false }
+  ]
+}

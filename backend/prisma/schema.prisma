@@ -1,0 +1,57 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id            String         @id @default(uuid())
+  email         @unique String
+  passwordHash  String?
+  provider      String         @default("credentials") // credentials, google, apple, otp
+  joinedAt      DateTime       @default(now())
+  subscription  Subscription?
+  scans         FoodScan[]
+  dietPlans     DietPlan[]
+}
+
+model Subscription {
+  id        String   @id @default(uuid())
+  userId    String   @unique
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  tier      String   @default("Free Plan") // Free Plan, Premium Core, Ultimate Coach Portal
+  status    String   @default("active") // active, cancelled, past_due
+  stripeId  String?  @unique
+  updatedAt DateTime @updatedAt
+}
+
+model FoodScan {
+  id              String   @id @default(uuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  foodName        String
+  calories        Int
+  protein         String
+  carbs           String
+  fats            String
+  cookingMethod   String
+  confidenceScore Float
+  healthScore     Int
+  scannedAt       DateTime @default(now())
+}
+
+model DietPlan {
+  id             String   @id @default(uuid())
+  userId         String
+  user           User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  goal           String
+  dailyCalories  Int
+  proteinTarget  String
+  carbTarget     String
+  fatTarget      String
+  weeklyMenuJson String   // Encases serialized breakfast/lunch/dinner daily array
+  createdAt      DateTime @default(now())
+}
