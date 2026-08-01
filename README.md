@@ -3,6 +3,9 @@
 NutriVerse is an enterprise-grade, high-performance 3D Health and AI Nutrition SaaS platform. It combines immersive 3D graphics (Three.js/React Three Fiber) with a robust Express secure API gateway and an administrative command center to deliver a fully-isolated management console and a public user experience.
 
 ---
+# 🥗 NutriVerse Live
+https://nutriverse-3d.vercel.app/
+
 
 # 🥗 NutriVerse
 
